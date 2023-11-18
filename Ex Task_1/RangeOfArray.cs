@@ -4,20 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prac_8
+namespace Ex_Task_1
 {
     public class RangeOfArray
     {
-        private int[] array;
         private int lowerBound;
         private int upperBound;
+        private int[] array;
 
-        public RangeOfArray(int lowerBound, int upperBound)
+        public RangeOfArray(int lower, int upper)
         {
-            this.lowerBound = lowerBound;
-            this.upperBound = upperBound;
-            int size = upperBound - lowerBound + 1;
-            array = new int[size];
+            lowerBound = lower;
+            upperBound = upper;
+            array = new int[upper - lower + 1];
         }
 
         public int this[int index]
@@ -25,21 +24,16 @@ namespace prac_8
             get
             {
                 if (IsIndexValid(index))
-                {
                     return array[index - lowerBound];
-                }
-                throw new IndexOutOfRangeException("Index is out of range.");
+                else
+                    throw new IndexOutOfRangeException("Индекс находится вне диапазона");
             }
             set
             {
                 if (IsIndexValid(index))
-                {
                     array[index - lowerBound] = value;
-                }
                 else
-                {
-                    throw new IndexOutOfRangeException("Index is out of range.");
-                }
+                    throw new IndexOutOfRangeException("Индекс находится вне диапазона");
             }
         }
 

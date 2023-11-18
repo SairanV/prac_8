@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EC36273C-D051-4AC3-926F-4AF64E24F51A}</ProjectGuid>
+    <ProjectGuid>{3BA53F71-2183-4D85-89D7-3867E9A0F0B7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Task_3</RootNamespace>
-    <AssemblyName>Task 3</AssemblyName>
+    <RootNamespace>Ex_Task_2</RootNamespace>
+    <AssemblyName>Ex Task_2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Matrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
